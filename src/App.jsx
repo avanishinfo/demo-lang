@@ -34,10 +34,11 @@ function App() {
             "recid": "176972"
         }
 
-        axios("/entries", {
+        axios("https://jsonplaceholder.typicode.com/posts", {
             method: 'GET',
             headers: headers
           }).then(function (response) {
+            debugger
             console.log(response)
             const dataD = response.data.data[0];
             const resultText = dataD.text;

@@ -34,11 +34,11 @@ function App() {
             "recid": "176972"
         }
 
-        axios("https://jsonplaceholder.typicode.com/posts", {
-            method: 'GET',
-            headers: headers
+        axios("https://translate.moxwave.com/p9/MOXAPI.ashx", {
+            method: 'POST',
+            headers: headers,
+            data: da
           }).then(function (response) {
-            debugger
             console.log(response)
             const dataD = response.data.data[0];
             const resultText = dataD.text;
@@ -46,7 +46,6 @@ function App() {
             
         })
         .catch(function (error) {
-            //console.log("url: " + url);
             console.log(error);
         });
         

@@ -34,13 +34,12 @@ function App() {
             "recid": "176972"
         }
 
-        axios("https://translate.moxwave.com/p9/MOXAPI.ashx", {
-            method: 'POST',
-            headers: headers,
-            data: da
+        axios("https://webrisk.googleapis.com/v1/uris:search?threatTypes=MALWARE&uri=http%3A%2F%2Ftestsafebrowsing.appspot.com%2Fs%2Fmalware.html&key=AIzaSyCORfOASFuuJ7mje4cffTdXCd-LcAnN07Q", {
+            method: 'GET',
+            headers: headers
           }).then(function (response) {
             console.log(response)
-            const dataD = response.data.data[0];
+            //const dataD = response.data.data[0];
             const resultText = dataD.text;
             document.getElementById("result").innerHTML = resultText;            
             

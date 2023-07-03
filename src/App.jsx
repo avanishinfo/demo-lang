@@ -7,8 +7,6 @@ function App() {
   let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Access-Control-Allow-Credentials', 'true');
 
     const onType = async (e) => {
         const search = e.target.value 
